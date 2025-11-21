@@ -16,4 +16,9 @@ class Category extends Model
         'category_rating',
         'category_status',
     ];
+
+    public function products()
+    {
+        return $this->hasMany(Product::class, 'fk_category_product');
+    }
 }
