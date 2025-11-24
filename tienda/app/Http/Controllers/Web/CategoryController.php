@@ -52,7 +52,7 @@ class CategoryController extends Controller
     public function show(Category $category)
     {
         return Inertia::render('Categories/Show', [
-            'category' => $category
+            'category' => $category->load('products'),
         ]);
     }
 
